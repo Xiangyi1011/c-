@@ -12,4 +12,17 @@ int main(){
   for( int i=0; i<10; i++){
     cout << vec_b[i] << '\n'; 
   }
+  cout << "==============" << '\n';
+
+  vector<int> vec_c(10, 8);
+  for(int i=0; i<10; i++){
+    cout << vec_c[i] << '\n';
+  }
+  cout << "==============" << '\n';
+  
+  vector<int> vec_d{10,20,30,40,50};
+  for(int i=0; i<5; i++){
+    cout << vec_d[i] << '\n';
+  }
+  cout << "==============" << '\n';
 }
