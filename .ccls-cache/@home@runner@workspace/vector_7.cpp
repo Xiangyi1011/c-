@@ -5,8 +5,9 @@ using namespace std;
 
 //利用&參考變數, 將vector<int>的實體傳給任何function
 
-void print(vector<int> v){ //v為一個實體名稱, 參數, copy一份list的值(vector), call by value(copy)
+void print(const vector<int> v){ //v為一個實體名稱, 參數, copy一份list的值(vector), call by value(copy)
   //void print(vector<int> &v)參考變數, 不是copy
+  //加const為參考常數, 不可改變list裡面的值, 此function皆未更改值, 只是取出值
   for(int elem:v){ //elem為一個實體名稱, copy一份v的值
     cout << elem << '\n'; //輸出值
   }
