@@ -11,13 +11,13 @@ int main(){
   const int NUMBER_OF_ENTRIES = 5; //常數, 值不可改變, 一般常數全部大寫
   vector<double> numbers(NUMBER_OF_ENTRIES); //建立一個有5個元素的vector實體, 預設值為0.0, double是浮點數, 可放小數
   cout << "請輸入" << NUMBER_OF_ENTRIES << "個數值：\n" << '\n';
-  for(int i=0; i<NUMBER_OF_ENTRIES; i++){
-    cin >> numbers[i]; //輸入值, 存入vector
-    sum += numbers[i]; //加總
+  for(double &elem:numbers){ //加上&為參考變數 參考vector記憶體的元素 所以將輸入值灌入vector中
+    cin >> elem; //輸入值, 存入vector
+    sum += elem; //加總
   }
 
   cout << "此vector：";
-  for (double elem:numbers){
+  for (double elem:numbers){ //不加&為讀取vector記憶體的元素, copy一份到elem, 也可使用&讀取
     cout << elem << " ";
   }
 
